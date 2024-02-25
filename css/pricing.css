@@ -1,0 +1,300 @@
+@charset "UTF-8";
+/* dm-serif-display-regular - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "DM Serif Display";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/dm-serif-display-regular.woff2") format("woff2");
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* public-sans-regular - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Public Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/public-sans-regular.woff2") format("woff2");
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* public-sans-700 - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Public Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/public-sans-700.woff2") format("woff2");
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  margin: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Public Sans";
+  background: rgb(237, 243, 248);
+}
+
+.container {
+  max-width: 1110px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.pricing {
+  padding-top: 125px;
+  background-repeat: no-repeat;
+  background-image: url("/img/pricing-mob.svg");
+  background-position: top right;
+}
+@media screen and (min-width: 500px) {
+  .pricing {
+    background-image: url("/img/pricing-tab.svg");
+  }
+}
+@media screen and (min-width: 992px) {
+  .pricing {
+    background-image: url("/img/pricing-pc.svg");
+    background-position: top right;
+  }
+}
+.pricing__block {
+  text-align: center;
+}
+
+.pricing__title {
+  color: rgb(54, 83, 107);
+  font-family: DM Serif Display;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 36px;
+  letter-spacing: -0.25px;
+  margin-bottom: 48px;
+}
+
+.pricing__sub_title {
+  color: rgb(186, 66, 112);
+  font-family: DM Serif Display;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: -0.18px;
+  margin-bottom: 17px;
+}
+
+.pricing__form {
+  text-align: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 8px;
+}
+
+.pricing__text {
+  color: rgb(108, 130, 148);
+  font-size: 15px;
+  font-weight: 100;
+  line-height: 28px;
+  margin-bottom: 10px;
+}
+
+.pricing__price {
+  color: rgb(54, 83, 107);
+  font-family: DM Serif Display;
+  font-size: 56px;
+  font-weight: 400;
+  line-height: 72px;
+  letter-spacing: -0.43px;
+  display: block;
+  padding-bottom: 25px;
+  border-bottom: 1px solid rgba(54, 83, 107, 0.25);
+  margin-bottom: 24px;
+}
+
+.pricing__btn {
+  display: inline-block;
+  border: 1px solid rgb(54, 83, 107);
+  border-radius: 24px;
+  background: transparent;
+  padding: 16px 24px 14px 24px;
+  color: rgb(54, 83, 107);
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: -0.12px;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+.pricing__btn:hover {
+  color: #fff;
+  background-color: rgb(54, 83, 107);
+}
+
+.pricing__btn_block {
+  text-align: center;
+  padding-top: 24px;
+  border-top: 1px solid rgba(54, 83, 107, 0.25);
+}
+
+.pricing__checkbox_block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 24px;
+}
+.pricing__checkbox_block label {
+  color: rgb(54, 83, 107);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+  cursor: pointer;
+}
+
+.pricing__list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 48px;
+}
+
+input[type=checkbox] {
+  cursor: pointer;
+  visibility: hidden;
+  accent-color: rgb(237, 243, 248);
+}
+input[type=checkbox]:checked {
+  visibility: unset;
+  accent-color: #edf3f8;
+}
+input[type=checkbox]:checked::after {
+  content: "✔";
+  visibility: unset;
+  color: rgb(186, 66, 112);
+  width: 17px;
+  height: 17px;
+  -webkit-transition: all 0.15s ease;
+  transition: all 0.15s ease;
+  background-color: #edf3f8;
+}
+
+.pricing__content {
+  max-width: 168px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .pricing {
+    padding-top: 163px;
+  }
+  .pricing__list {
+    max-width: unset;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+  }
+  .pricing__title {
+    margin-bottom: 69px;
+    font-size: 48px;
+    line-height: 56px;
+  }
+  .pricing__sub_title {
+    line-height: 40px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .pricing {
+    padding-top: 170px;
+  }
+  .pricing__block {
+    text-align: left;
+  }
+  .pricing__form {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+  }
+  .pricing__content {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .pricing__btn {
+    margin-left: 0;
+  }
+  .pricing__btn_block {
+    text-align: left;
+  }
+  .pricing__list {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    gap: 30px;
+  }
+  .pricing__title {
+    font-size: 56px;
+  }
+  .pricing__sub_title {
+    font-size: 32px;
+  }
+}/*# sourceMappingURL=pricing.css.map */

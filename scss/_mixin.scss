@@ -1,0 +1,186 @@
+@mixin text ($lineHeight: 28px) {
+    color: #1b262f;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: $lineHeight;
+}
+
+@mixin primary-btn {
+    display: inline-block;
+    border-radius: 24px;
+    box-shadow: 10px 10px 25px -10px rgba(54, 83, 107, 0.25);
+    background-color: $dark-pink;
+    padding: 16px 25px 14px 25px;
+    color: $link-water-white;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: -0.12px;
+    transition: all 0.4s ease;
+
+    &:hover {
+        background-color: $charm-pink;
+    }
+}
+
+@mixin secondary-btn1 {
+    display: inline-block;
+    color: $link-water-white;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: -0.12px;
+    padding: 16px 32px 14px 32px;
+    background-color: transparent;
+    transition: all 0.4s ease;
+    border: 1px solid $link-water-white;
+    border-radius: 24px;
+
+    &:hover {
+        background-color: $link-water-white;
+        color: $mirage-blue;
+    }
+}
+
+@mixin secondary-btn2 {
+    display: inline-block;
+    border: 1px solid $san-juan-blue;
+    border-radius: 24px;
+    background: transparent;
+    padding: 16px 24px 14px 24px;
+    color: $san-juan-blue;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: -0.12px;
+    transition: all 0.5s ease;
+
+    &:hover {
+        color: #fff;
+        background-color: $san-juan-blue;
+    }
+}
+
+@mixin hero-bg {
+    background-repeat: no-repeat;
+    background-image: url('/img/hero-mobile-bg.svg');
+    background-position: top center;
+    background-size: contain;
+
+    @media screen and (min-width:500px) {
+        background-image: url('/img/hero-tab-bg.svg');
+        background-size: auto;
+    }
+
+    @media screen and (min-width:768px) {
+        background-size: contain;
+    }
+
+    @media screen and (min-width:992px) {
+        background-image: url('/img/hero-pc-bg.svg');
+        background-position: top right;
+        background-size: auto;
+    }
+}
+
+@mixin work-bg {
+    background-repeat: no-repeat;
+    background-image: url('/img/work-mob-bg.svg');
+    background-position: top center;
+    background-size: cover;
+
+    @media screen and (min-width:500px) {
+        background-image: url('/img/work-tab-bg.svg');
+        background-size: cover;
+    }
+
+    @media screen and (min-width:768px) {
+        background-size: cover;
+    }
+
+    @media screen and (min-width:992px) {
+        background-image: url('/img/work-pc-bg.svg');
+        background-position: top left;
+        background-size: auto;
+    }
+}
+
+
+@mixin footer-bg {
+    background-repeat: no-repeat;
+    background-image: url('/img/footer-mob.svg');
+    background-position: bottom center;
+    background-size: cover;
+
+    @media screen and (min-width:500px) {
+        background-size: cover;
+    }
+
+    @media screen and (min-width:768px) {
+        background-image: url('/img/footer-tab.svg');
+        background-size: cover;
+        background-position: bottom right;
+    }
+
+    @media screen and (min-width:992px) {
+        background-image: url('/img/footer-pc.svg');
+        background-size: cover;
+    }
+}
+
+@mixin form {
+    input {
+        border-radius: 24px;
+        box-shadow: 10px 10px 25px -10px #36536b40;
+        background: $link-water-white;
+        display: block;
+        width: 100%;
+        padding: 16px 0 14px 27px;
+        border: none;
+        overflow: hidden;
+        margin-bottom: 16px;
+    }
+
+    button {
+        @include primary-btn;
+        display: block;
+        border: none;
+        width: 100%;
+        cursor: pointer;
+    }
+
+    @media screen and (min-width:768px) {
+        border-radius: 24px;
+        box-shadow: 10px 10px 25px -10px #36536b40;
+        background: $link-water-white;
+        display:flex;
+        justify-content: space-between;
+        max-width: 445px;
+        margin-left: auto;
+        margin-right: auto;
+        input{
+            box-shadow:unset;
+            width: unset;
+            margin-bottom: 0;
+        }
+        button{
+            width: unset;
+        }
+    }
+}
+
+
+@mixin pricing-bg {
+    background-repeat: no-repeat;
+    background-image: url('/img/pricing-mob.svg');
+    background-position: top right;
+
+    @media screen and (min-width:500px) {
+        background-image: url('/img/pricing-tab.svg');
+    }
+
+    @media screen and (min-width:992px) {
+        background-image: url('/img/pricing-pc.svg');
+        background-position: top right;
+    }
+}

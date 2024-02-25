@@ -1,0 +1,51 @@
+.ready {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.ready__title {
+    color: $san-juan-blue;
+    font-family: DM Serif Display;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 36px;
+    letter-spacing: -0.25px;
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.ready__form {
+    @include form;
+}
+
+@media screen and (min-width:768px) {
+    .ready{
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+    .ready__title{
+        margin-bottom: 40px;
+        font-size: 48px;
+        line-height: 56px;
+    }
+}
+@media screen and (min-width:992px) {
+    .ready{
+        padding-top: 96px;
+        padding-bottom: 96px;
+        &__block{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+    .ready__form{
+        margin: 0;
+        input{
+            padding-right: 30px;
+        }
+    }
+    .ready__title{
+        margin-bottom: 0;
+    }
+}

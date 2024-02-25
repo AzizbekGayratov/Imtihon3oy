@@ -1,0 +1,58 @@
+.about__sub_title {
+    margin-bottom: 16px;
+    color: $san-juan-blue;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 25px;
+    letter-spacing: -0.14px;
+}
+
+.about__inner_text {
+    color: $light-san-juan-blue;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: -0.12px;
+}
+
+.about__item {
+    text-align: center;
+}
+
+.about__list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 48px;
+}
+
+
+#about1::before{
+    content: url('/img/about1.svg');
+    display: block;
+    text-align: center;
+    margin-bottom: 32px;
+}
+#about2::before{
+    content: url('/img/about2.svg');
+    display: block;
+    text-align: center;
+    margin-bottom: 32px;
+}
+#about3::before{
+    content: url('/img/about3.svg');
+    display: block;
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+@media screen and (min-width:768px) {
+    .about__list {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 10px;
+    }
+}
+@media screen and (min-width:992px) {
+    .about__list{
+        gap: 30px;
+    }
+}
